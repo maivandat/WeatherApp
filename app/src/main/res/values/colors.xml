@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="gradient_start">#192e31</color>
+    <color name="colorWeatherRain">#24454D</color>
+    <color name="gradient_end">#4f6e71</color>
+    <color name="colorOrange">#FF6B00</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTransition">#00FFFFFF</color>
+    <color name="colorGray">#92BDBBBB</color>
+    <array name="progressRainbow">
+        <item>#00D6FF</item>
+        <item>#242121</item>
+    </array>
+
+</resources>

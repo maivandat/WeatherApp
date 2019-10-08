@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="vn.hueic.student.maivan.dat.weatherapp.ui.viewmodel.ItemHourlyViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:text="@{viewmodel.getDate(viewmodel.hourly.dt)}"
+            android:textSize="@dimen/dimen_15sp"
+            android:textColor="@color/colorWhite"
+            tools:text="00:00"
+            android:id="@+id/tv.item.hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv.weatherImageHourly"
+            bindImageRes="@{viewmodel.getWeatherImage(viewmodel.hourly.weather.get(0).main)}"
+            tools:src="@drawable/ic_sunny_white_100dp"
+            android:layout_width="@dimen/dimen_50dp"
+            android:layout_height="@dimen/dimen_50dp"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="@{viewmodel.getTempRounding(viewmodel.hourly.main.temp).concat(@string/dot)}"
+            android:textSize="@dimen/dimen_15sp"
+            android:textColor="@color/colorWhite"
+            tools:text="26"
+            android:id="@+id/tv.item.temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</layout>
+
